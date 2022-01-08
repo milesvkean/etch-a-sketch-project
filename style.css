@@ -13,16 +13,10 @@
 
 .title {
   text-align: center;
-  /* font-size: 80px; */
 }
 
 .main {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
   height: 960px;
-  /* width: 960px; */
 }
 
 button {
@@ -43,8 +37,6 @@ a {
 
 .buttons {
   display: flex;
-  /* padding-left: 650px;
-  padding-right: 650px; */
   flex-flow: column;
   margin-bottom: 30px;
   gap: 0px;
@@ -52,9 +44,6 @@ a {
 
 #container {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  grid-template-rows: 1fr;
-  grid-gap: 20px; */
   height: 960px;
   width: 960px;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
