@@ -1,6 +1,11 @@
-const container = document.getElementById("container");
+function makeRows(rows = 16, cols = 16) {
+    if (rows < 1 || cols < 1) {
+        return;
+    }
 
-function makeRows(rows, cols) {
+    rows = rows > 100 ? 100 : rows;
+    cols = cols > 100 ? 100 : cols;
+
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
     for (c = 0; c < (rows * cols); c++) {
@@ -12,4 +17,9 @@ function makeRows(rows, cols) {
     };
 };
 
-makeRows(16, 16);
+const gridSize = parseInt(window.prompt("Type the number of squares per side you want on the new grid (Maximum 100)", "16"));
+makeRows(gridSize, gridSize);
+
+// function promptMe() {
+//     const gridSize = parseInt(window.prompt("Type the number of squares per side you want (Maximum 100)", ""));
+// }
