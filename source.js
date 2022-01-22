@@ -1,3 +1,7 @@
+const DEFAULT_SIZE = 16
+
+let currentSize = DEFAULT_SIZE
+
 function makeRows(rows = 16, cols = 16) {
     if (rows < 1 || cols < 1) {
         return;
@@ -17,9 +21,13 @@ function makeRows(rows = 16, cols = 16) {
     };
 };
 
-const gridSize = parseInt(window.prompt("Type the number of squares per side you want on the new grid (Maximum 100)", "16"));
-makeRows(gridSize, gridSize);
+function promptMe() {
+    const gridSize = parseInt(window.prompt("Type the number of squares per side you want (Maximum 100)", ""));
 
-// function promptMe() {
-//     const gridSize = parseInt(window.prompt("Type the number of squares per side you want (Maximum 100)", ""));
-// }
+    container.innerHTML = "";
+    makeRows(gridSize, gridSize);
+}
+
+window.onload = () => {
+    makeRows(DEFAULT_SIZE);
+}  
