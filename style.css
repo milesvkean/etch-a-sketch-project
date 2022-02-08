@@ -29,6 +29,7 @@ button {
   padding: 8px 8px;
   text-decoration: none;
   color: #F9FAF8;
+  cursor: pointer;  
 }
 
 .buttons {
